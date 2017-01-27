@@ -1,29 +1,41 @@
-#include <fstream>
 #include <iostream>
 #include <string>
+
+//for pretty CLI printing
+#include <iomanip>
+
 using namespace std;
 
 class Person
 {
 public:
     Person();
-    Person(const Person & person);
+    Person(const Person &person);
     ~Person();
 
-    void set(const string fn, const string ln,
-        const int birth, const int death, const string contrib);
-    void get(string &fn, string &ln,
-            int &birth, int &death, string &contrib);
+    //setters
+    void setFirstName(const string fn);
+    void setLastName(const string ln);
+    void setBirth(const int birth);
+    void setDeath(const int death);
+    void setContribution(const string contribution);
+
+    //getters
+    string getFirstName();
+    string getLastName();
+    int getBirth();
+    int getDeath();
+    string getContribution();
 
     void print();
-    void read();
-    void read(ifstream &din);
+    //void read();
+    //void read(ifstream &din);
 
 private:
     static const bool DEBUG = false;
-    string first_name;
-    string last_name;
-    int birth_year;
-    int death_year;
+    string firstName;
+    string lastName;
+    int birthYear;
+    int deathYear;
     string contribution;
 };
