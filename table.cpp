@@ -54,6 +54,7 @@ void Table::read(string file_name)
 
         //opted to go with while loop as file may be longer than array size
         //reads line till eof or breaks out when array filled
+        //noting that !file.eof() is not as efficient.
         while(file >> tempFirstName)
         {
             //error provention of array out of bounds excpetion
