@@ -28,6 +28,7 @@ public:
     string getContribution();
 
     void print();
+    //all file logic is declared in table.h/cpp
     //void read();
     //void read(ifstream &din);
 
